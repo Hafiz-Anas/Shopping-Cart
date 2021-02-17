@@ -12,61 +12,118 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.container {
+/*NAVBAR*/
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.container h1 {
-  font-size: 35px;
+.nav-container h1 {
+  font-size: 40px;
   color: white;
+  font-family: cursive;
+  line-height: 60px;
+  user-select: none;
 }
-.container img {
-  width: 80px;
-  height: 50px;
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav-links li {
+  list-style: none;
+  padding: 0px 25px;
+}
+.nav-links img {
   cursor: pointer;
+  user-select: none;
   -webkit-user-drag: none;
 }
+.active {border-bottom: 3px solid #fff;}
+/*PRODUCTS*/
 .products {
-  width: 68%;
-  margin: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 50px;
   grid-gap: 2rem;
 }
-
 .product {
   background-color: rgb(255, 255, 255);
+  padding: 0px 15px;
 }
 .header h2 {
   text-align: start;
-  font-size: 30px;
-  padding: 0px 10px;
+  font-size: 28px;
+  font-family: cursive;
 
+}
+.product img {
+  width: 100%;
 }
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 0px
 }
 .footer p {
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 600;
 }
 .footer span {
   font-weight: bold;
-  color: rgb(255, 137, 137);
+  color: rgb(219, 37, 255);
 }
 .footer button {
-  padding: 10px;
+  padding: 10px 12px;
   outline: none;
-  border: 1px solid black;
+  border: 0;
+  font-size: 14px;
   cursor: pointer;
-  background-color: black;
+  transition: ease-in-out .5s;
+  background: linear-gradient(to bottom left, #3366ff 0%, #ff66ff 100%);
   color: white;
-  transition: all .4s;
 }
 .footer button:hover {
-  background-color: white;
-  color: black;
+  background: linear-gradient(to top right, #3366ff 0%, #ff66ff 100%);
+}
+/*CART*/
+.cart-container {
+  max-width: 700px;
+  margin: auto;
+}
+.cart {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0px;
+  padding: 10px 20px;
+}
+.cart .title-price {flex: 5}
+.cart .img {flex: 3}
+.cart .quantity {flex: 1}
+.cart .del-btn {flex: 1}
+.cart h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.cart p {
+  font-size: 18px;
+  padding-top: 8px;
+}
+.cart p span {
+  font-weight: bold;
+  color: rgb(236, 49, 49);
+}
+.cart img {
+  width: 130px;
+  height: 100px;
+}
+.cart button {
+  background-color: red;
+  color: white;
+  padding: 8px 10px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
 }

@@ -29,7 +29,6 @@ class products extends PureComponent {
                     {!this.isAdded(product.id) && (
                         <button onClick={()=>this.handleClick(product)}>Add to Cart</button>
                     )}
-                    
                 </div>
             </div>
           )
@@ -39,7 +38,7 @@ class products extends PureComponent {
       );
 
     return (
-        <div className="contain">
+        <div className="container">
             <h2 className='center'>Our Products</h2>
             <div className="products">
                { productsList }
@@ -61,6 +60,6 @@ const dispatchToProps = (dispatch) => {
     return {
         addProductToCart: (product) => {dispatch(addProductToCart(product))}
     }
-  }
+}
 
 export default connect(productsFromReducer, dispatchToProps)(products);
