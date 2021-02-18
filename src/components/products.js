@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from "react-redux";
 import  addProductToCart from '../actions/productAction';
-
+import { Link } from "react-router-dom";
 
 class products extends PureComponent {
     
@@ -19,10 +19,10 @@ class products extends PureComponent {
           return (
             <div className="product" key={product.id}>
                 <div className="header"> 
-                   <h2>{product.title}</h2>
+                    <Link to={'/' + product.id}><h2>{product.title}</h2></Link>
                 </div>
                 <div className="Img">
-                    <img src={product.img}/>
+                    <Link to={'/' + product.id}><img src={product.img}/></Link>
                 </div>
                 <div className="footer">
                     <p>Price: <span>{product.price}</span></p>

@@ -4,14 +4,9 @@
   box-sizing: border-box;
 }
 body {
-  background: rgb(204, 204, 204);
-
+  background: rgb(211, 211, 211);
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+img {width: 100%;}
 /*NAVBAR*/
 .nav-container {
   display: flex;
@@ -43,21 +38,17 @@ code {
 .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 50px;
+  margin: 50px 0px;
   grid-gap: 2rem;
 }
 .product {
   background-color: rgb(255, 255, 255);
   padding: 0px 15px;
+  border-radius: 2px
 }
 .header h2 {
   text-align: start;
   font-size: 28px;
-  font-family: cursive;
-
-}
-.product img {
-  width: 100%;
 }
 .footer {
   display: flex;
@@ -78,6 +69,7 @@ code {
   border: 0;
   font-size: 14px;
   cursor: pointer;
+  border-radius: 4px;
   transition: ease-in-out .5s;
   background: linear-gradient(to bottom left, #3366ff 0%, #ff66ff 100%);
   color: white;
@@ -85,6 +77,46 @@ code {
 .footer button:hover {
   background: linear-gradient(to top right, #3366ff 0%, #ff66ff 100%);
 }
+/*SINGLE-PRODUCT*/
+.single-product {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr );
+  grid-gap: 2rem;
+  margin: 60px 0px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 3px;
+}
+.single-product-desc {
+  padding: 30px 25px;
+}
+.single-product-desc h2 {
+  font-size: 30px;
+  margin: 0;
+}
+.single-product-desc .desc{
+  font-size: 15px;
+  padding: 20px 0px;
+}
+.single-product-desc li {
+  padding: 2px 0px;
+  font-weight: bold;
+  list-style: decimal;
+}
+.single-product-desc li span {
+  font-weight: lighter !important;
+  margin-left: 20px;
+}
+.single-product-desc p {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+.single-product-desc p span {
+  font-weight: bold;
+  color: red;
+}
+
 /*CART*/
 .cart-container {
   max-width: 700px;
@@ -96,11 +128,12 @@ code {
   justify-content: space-between;
   align-items: center;
   margin: 30px 0px;
+  border-radius: 2px;
   padding: 10px 20px;
 }
 .cart .title-price {flex: 5}
 .cart .img {flex: 3}
-.cart .quantity {flex: 1}
+.cart .quantity {flex: 2}
 .cart .del-btn {flex: 1}
 .cart h2 {
   margin: 0;
@@ -118,6 +151,14 @@ code {
 .cart img {
   width: 130px;
   height: 100px;
+}
+.cart .quantity {
+  font-size: 20px;
+  user-select: none;
+}
+.quantity span:not(.quantity span:nth-child(2)) {
+  cursor: pointer;
+  padding: 0px 4px;
 }
 .cart button {
   background-color: red;
